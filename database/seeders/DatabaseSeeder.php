@@ -22,8 +22,24 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            // UserSeeder::class,
             TodoSeeder::class,
-            CategorySeeder::class,
+            PostSeeder::class,
+
+            // CategorySeeder::class,
         ]);
     }
 }
+
+//require enc type for form 
+// php artisan storage:link
+// if ($request->hasFile('photo')) {
+//     // Delete old photo
+//     Storage::disk('public')->delete($post->photo);
+
+//     // Upload new photo
+//     $photoPath = $request->file('photo')->store('photos', 'public');
+//     $new['photo'] = $photoPath;
+// }
+
+// hw crud for post

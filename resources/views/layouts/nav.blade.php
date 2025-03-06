@@ -32,6 +32,9 @@
               <li class="nav-item">
                 <a class="nav-link" href={{ route('todos.index') }}>Todos</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href={{ route('categories.index') }}>Category</a>
+              </li>
             </ul>
           </div>
         </div>
