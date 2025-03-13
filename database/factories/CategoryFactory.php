@@ -19,10 +19,6 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => fake()->unique()->company(),
-            'image' => fake()->imageUrl(),
-            'description' => fake()->paragraph,
-            'status' => fake()->boolean,
-            'user_id'=>User::factory()->new(),
         ];
     }
 }

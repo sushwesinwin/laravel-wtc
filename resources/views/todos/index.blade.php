@@ -45,5 +45,5 @@
             
         </tbody>
     </table>
-    <div style="display: flex; justify-content: center;" class="mt-5">{{ $todos->links() }}</div>
+    {{-- <div style="display: flex; justify-content: center;" class="mt-5">{{ $todos->links() }}</div> --}}
 @endsection 
