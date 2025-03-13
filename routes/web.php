@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -15,6 +17,7 @@ Route::get('/contact', function() {
     return view('contact');
 });
 
+/*
 Route::get('/posts', function() {
     $all = ["Web Development", "Laravel", "PHP", "JavaScript"];
     $posts = [
@@ -25,6 +28,7 @@ Route::get('/posts', function() {
     ];
     return view('posts', ['categories' => $all, 'posts' => $posts]); //key-value pair, carry data to view with key!
 });
+*/
 
 Route::get('/hello', function() {
     return 'Hello World!'; //print Hello World! on browser
@@ -39,3 +43,7 @@ Route::delete('/todos/{todo}', [TodoController::class, 'destroy'])->name('todos.
 
 //alternative use of each route, using resource
 Route::resource('categories', CategoryController::class); //resource
+
+Route::resource('posts', PostController::class);
+
+Route::resource('users', UserController::class);

@@ -9,5 +9,18 @@ class Post extends Model
 {
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
-    
+
+    protected $fillable = [
+        'title',
+        'body',
+        'photo',
+        'category_id',
+        'user_id',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class); // $this means post belongs to user
+    }
+    // $post->user->name
 }

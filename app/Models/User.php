@@ -45,4 +45,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class); // $this means user has many posts
+    }
+
+    // $user->@foreach($user->posts as $post)
 }
